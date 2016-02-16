@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_5dp"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="4dp">
+
+        <!--android:clickable="true"-->
+        <!--android:foreground="?android:attr/selectableItemBackground"-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_5dp"
+                android:layout_centerVertical="true"
+
+                android:padding="@dimen/margin_5dp"
+                app:placeholderImage="@drawable/placeholder"
+                app:placeholderImageScaleType="focusCrop" />
+
+            <!--<ProgressBar-->
+                <!--android:id="@+id/downloadProgressBar"-->
+                <!--style="?android:attr/progressBarStyleHorizontal"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_margin="@dimen/margin_5dp"-->
+                <!--android:padding="@dimen/margin_5dp" />-->
+
+            <com.socialinfotech.realm.searvice.RoundProgressBarWidthNumber
+                android:id="@+id/downloadProgressBar"
+                android:layout_width="@dimen/height_progressdp"
+                android:layout_height="@dimen/height_progressdp"
+                app:progress_reached_color="#ff0000"
+                android:layout_centerInParent="true"
+                android:progress="00" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
