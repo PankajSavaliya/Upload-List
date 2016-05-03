@@ -28,3 +28,5 @@ This Example uplaod MultiPart File(Image) upload to server useing by Retrofit.al
     @POST("/upload")
     Observable<image> getImageName(@Part("mimage") ProgressedTypedFile attachments);
 
+##Idea by
+http://www.socialinfotech.com/
